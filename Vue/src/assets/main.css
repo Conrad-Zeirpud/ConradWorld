@@ -1,0 +1,7 @@
+@import "./base.css";
+
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
