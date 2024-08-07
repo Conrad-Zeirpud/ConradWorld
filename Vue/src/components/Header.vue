@@ -2,7 +2,11 @@
 
 <template>
   <main>
-    <img src="../assets/logo.png" alt="ConradWorld" height="100" />
+    <img
+      src="http://92.222.170.90:9000/conrad/logo/logo.png"
+      alt="ConradWorld"
+      height="100"
+    />
     <nav>
       <RouterLink class="link" to="/app">Mes applications</RouterLink>
       <RouterLink class="link" to="/skill">Mes skills</RouterLink>

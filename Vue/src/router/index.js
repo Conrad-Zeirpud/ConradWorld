@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import Skill from "../views/SkillsView.vue";
 import App from "../views/AppView.vue";
+import GeneratorWodView from "@/views/GeneratorWodView.vue";
+import KanbanView from "@/views/KanbanView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +30,16 @@ const router = createRouter({
       path: "/app",
       name: "app",
       component: App,
+    },
+    {
+      path: "/GenWod",
+      name: "GenWod",
+      component: GeneratorWodView,
+    },
+    {
+      path: "/kanban",
+      name: "kanban",
+      component: KanbanView,
     },
   ],
 });

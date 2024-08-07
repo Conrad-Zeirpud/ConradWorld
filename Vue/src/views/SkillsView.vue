@@ -15,26 +15,27 @@
         </p>
         <h2>Compétences Techniques</h2>
         <div id="sticker-container">
-          <Sticker imagePath="../src/assets/vue.svg" titre="Vuejs 3" />
-          <Sticker imagePath="../src/assets/python.svg" titre="Python" />
-          <Sticker imagePath="../src/assets/HTML.png" titre="HTML 5" />
-          <Sticker imagePath="../src/assets/css.png" titre="Css 3" />
+          <Sticker imagePath="/vue.svg" titre="Vuejs 3" />
+          <Sticker imagePath="/python.svg" titre="Python" />
+          <Sticker imagePath="/HTML.png" titre="HTML 5" />
+          <Sticker imagePath="/css.png" titre="Css 3" />
           <Sticker
-            imagePath="../src/assets/javascript.png"
+            imagePath="/javascript.png"
             titre="Javascript 5"
           />
-          <Sticker imagePath="../src/assets/pinia.png" titre="Pinia" />
-          <Sticker imagePath="../src/assets/docker.png" titre="Docker" />
-          <Sticker imagePath="../src/assets/vba.svg" titre="VBA" />
-          <Sticker imagePath="../src/assets/word.svg" titre="Word" />
-          <Sticker imagePath="../src/assets/excel.png" titre="Excel" />
+          <Sticker imagePath="/pinia.png" titre="Pinia" />
+          <Sticker imagePath="/docker.png" titre="Docker" />
+          <Sticker imagePath="/vba.svg" titre="VBA" />
+          <Sticker imagePath="/word.svg" titre="Word" />
+          <Sticker imagePath="/excel.png" titre="Excel" />
           <Sticker
-            imagePath="../src/assets/powerpoint.png"
+            imagePath="/powerpoint.png"
             titre="Power point"
           />
-          <Sticker imagePath="../src/assets/git.png" titre="Git" />
-          <Sticker imagePath="../src/assets/sql.png" titre="PostgreSQL" />
-
+          <Sticker imagePath="/git.png" titre="Git" />
+          <Sticker imagePath="/sql.png" titre="PostgreSQL" />
+          <Sticker imagePath="/minio.png" titre="MinIO" />
+          
           <!-- <Sticker imagePath="../src/assets/excel.png" titre="Excel" /> -->
         </div>
         <h2>Projets</h2>
@@ -70,8 +71,10 @@
             </div>
         </div>
       </div>
+      <Footer />
 
     </div>
+  
   </div>
 </template>
 
@@ -79,6 +82,7 @@
 import Header from "../components/Header.vue";
 import Sticker from "../components/commonTools/Sticker.vue";
 import Carte from "../components/commonTools/CarteReverse.vue";
+import Footer from "@/components/Footer.vue";
 
 import { onMounted, ref } from "vue";
 import Highcharts from "highcharts";
@@ -216,7 +220,13 @@ onMounted(() => {
 <style scoped>
 #main {
   width: 100%;
-  background-color: var(--brown-100);
+  /* background: linear-gradient(45deg ,var(--emerald-green-100), var(--blue-700)); */
+  background: radial-gradient(circle, 
+                                var(--blue-100), 
+                                var(--blue-300), 
+                                var(--blue-400), 
+                                var(--blue-300), 
+                                var(--blue-100));
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -224,7 +234,7 @@ onMounted(() => {
 }
 #leftSide {
   width: 50%;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   border-radius: 15px;
   padding: 15px;
   margin: 15px;
@@ -262,7 +272,7 @@ onMounted(() => {
 
 #qualite{
     width: 100%;
-    background-color: var(--brown-200);
+    /* background-color: var(--brown-100); */
     border-radius: 25px;
     padding: 5px;
     display: flex;

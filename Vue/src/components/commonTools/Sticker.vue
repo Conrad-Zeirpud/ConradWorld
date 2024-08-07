@@ -13,7 +13,10 @@ const props = defineProps({
 
 <template>
   <div id="sticker">
-    <img :src="'../' + imagePath" :alt="titre" />
+    <img
+      :src="'http://92.222.170.90:9000/conrad/logo' + imagePath"
+      :alt="titre"
+    />
     <p>{{ titre }}</p>
   </div>
 </template>
@@ -40,7 +43,7 @@ const props = defineProps({
   box-shadow: 1px 1px 1px var(--brown-700), inset 2px 3px 5px var(--brown-700),
     inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
-
+/* 
 #sticker:hover {
   background-image: linear-gradient(
     to bottom right,
@@ -50,7 +53,7 @@ const props = defineProps({
   box-shadow: inset 2px 2px 1px var(--brown-700),
     inset 2px 3px 5px var(--brown-700),
     inset -2px -3px 5px rgba(255, 255, 255, 0.5);
-}
+} */
 
 img {
   min-height: 80px;

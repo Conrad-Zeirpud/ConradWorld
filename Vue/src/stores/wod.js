@@ -1,0 +1,83 @@
+import { ref, computed } from "vue";
+import { defineStore } from "pinia";
+
+export const useWodGenStore = defineStore("wodgen", () => {
+  const count = ref(0);
+  const doubleCount = computed(() => count.value * 2);
+  const mouvements = {
+    2: { name: "Power Snatch", category: "haltero" },
+    3: { name: "Squat Snatch", category: "haltero" },
+    4: { name: "Hang Snatch", category: "haltero" },
+    5: { name: "Snatch Balance", category: "haltero" },
+    6: { name: "Clean and Jerk", category: "haltero" },
+    7: { name: "Power Clean", category: "haltero" },
+    8: { name: "Squat Clean", category: "haltero" },
+    9: { name: "Hang Clean", category: "haltero" },
+    10: { name: "Split Jerk", category: "haltero" },
+    11: { name: "Push Jerk", category: "haltero" },
+    12: { name: "Push Press", category: "haltero" },
+    13: { name: "Deadlift", category: "haltero" },
+    14: { name: "Sumo Deadlift High Pull", category: "haltero" },
+    15: { name: "Front Squat", category: "haltero" },
+    15: { name: "Back Squat", category: "haltero" },
+    16: { name: "Overhead Squat", category: "haltero" },
+    17: { name: "Thruster", category: "haltero" },
+    18: { name: "Pull-up", category: "gym" },
+    21: { name: "Chest-to-Bar", category: "gym" },
+    22: { name: "Muscle-up", category: "gym" },
+    23: { name: "Toes-to-Bar", category: "gym" },
+    24: { name: "Push-up", category: "gym" },
+    25: { name: "Handstand Push-up", category: "gym" },
+    26: { name: "Handstand Walk", category: "gym" },
+    27: { name: "Dip", category: "gym" },
+    28: { name: "L-sit", category: "gym" },
+    29: { name: "Pistols", category: "gym" },
+    30: { name: "Ring Dips", category: "gym" },
+    31: { name: "Ring Muscle-ups", category: "gym" },
+    31: { name: "Pull-over", category: "gym" },
+    32: { name: "Run", category: "Conditionnement" },
+    34: { name: "Rowing", category: "Conditionnement" },
+    35: { name: "Ski Erg", category: "Conditionnement" },
+    36: { name: "Asault Bike", category: "Conditionnement" },
+    37: { name: "Echo Bike", category: "Conditionnement" },
+    38: { name: "Burpees", category: "Conditionnement" },
+    38: { name: "Burpees box jump", category: "Conditionnement" },
+    38: { name: "Burpees box jump over", category: "Conditionnement" },
+    38: { name: "Burpees pull-up", category: "Conditionnement" },
+    38: { name: "Burpees chest-to-bar", category: "Conditionnement" },
+    38: { name: "Burpees Bar muscle-up", category: "Conditionnement" },
+    38: { name: "Burpees ring muscle-up", category: "Conditionnement" },
+    38: { name: "Burpees deadlift", category: "Conditionnement" },
+    38: { name: "Burpees barbell facing bar", category: "Conditionnement" },
+    38: { name: "Burpees Broad jump", category: "Conditionnement" },
+    38: { name: "Devil Press", category: "Conditionnement" },
+    39: { name: "Single-unders", category: "Conditionnement" },
+
+    39: { name: "Double-unders", category: "Conditionnement" },
+    39: { name: "Cross-over", category: "Conditionnement" },
+
+    40: { name: "Box Jump", category: "Conditionnement" },
+    41: { name: "Wall Ball", category: "Conditionnement" },
+    42: { name: "Kettlebell US Swing", category: "Conditionnement" },
+    42: { name: "Kettlebell Russian Swing", category: "Conditionnement" },
+
+    43: { name: "Dumbbell Snatch", category: "Conditionnement" },
+    43: { name: "Dumbbell Hang Snatch", category: "Conditionnement" },
+    43: { name: "Dumbbell Clean", category: "Conditionnement" },
+    43: { name: "Dumbbell Hang Clean", category: "Conditionnement" },
+    43: { name: "Dumbbell Soulder to Overhead", category: "Conditionnement" },
+    43: { name: "Dumbbell Clean & Jerk", category: "Conditionnement" },
+    43: { name: "Dumbbell Box Step-up", category: "Conditionnement" },
+    43: { name: "Dumbbell Box over", category: "Conditionnement" },
+
+    44: { name: "Turkish Get-Up", category: "Conditionnement" },
+    45: { name: "Ball Slam", category: "Conditionnement" },
+    46: { name: "GHD Sit-Up", category: "Conditionnement" },
+    47: { name: "Sled Push", category: "Conditionnement" },
+    48: { name: "Sled Pull", category: "Conditionnement" },
+    49: { name: "Farmer's Carry", category: "Conditionnement" },
+    50: { name: "Sandbag Carry", category: "Conditionnement" },
+  };
+
+  return { count, doubleCount, increment };
+});
