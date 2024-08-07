@@ -2,7 +2,7 @@
 FROM node:22
 
 # Définir le répertoire de travail dans le conteneur
-WORKDIR /Vue
+WORKDIR /app
 
 # Copier le fichier package.json et package-lock.json
 COPY package*.json ./
@@ -21,7 +21,7 @@ FROM nginx:alpine
 
 
 # Copier les fichiers de construction de l'application depuis l'étape précédente
-COPY --from=0 /Vue/dist /usr/share/nginx/html
+COPY --from=0 /app/dist /usr/share/nginx/html
 
 # Exposer le port 80 pour le serveur web
 EXPOSE 80
