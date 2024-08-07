@@ -3,7 +3,7 @@
 <template>
   <h2>Me contacter</h2>
   <div id="footer">
-    <div>
+    <div class="blocks">
       <h3>Adresse mail</h3>
       <ul>
         <li>
@@ -13,7 +13,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="blocks">
       <h3>Réseaux sociaux</h3>
       <ul id="reseaux">
         <li>
@@ -44,21 +44,27 @@
 
 <style scoped>
 #footer {
-  display: flex;
+  display: inline-flex;
   width: 60%;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.blocks {
+  padding: 0px 10px;
 }
 
 h2 {
   color: var(--brown-500);
-  margin: 30px 0px 20px 50px;
+  margin: 50px 0px 0px 0px;
   width: 100%;
+  text-align: center;
 }
 h3 {
   color: var(--brown-500);
-  margin: 25px 0px;
+  margin: 15px 0px 5px 0px;
 }
 
 li {
