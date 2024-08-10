@@ -15,11 +15,6 @@ on:
   pull_request:
     branches: ["main"]
 
-permissions:
-  id-token: write
-  contents: read
-  attestations: write
-
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -30,11 +25,6 @@ jobs:
       attestations: write
       id-token: write
     steps:
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-path: "Conrad-Zeirpud/ConradWorld"
-
       - name: Check out the repo
         uses: actions/checkout@v4
 
@@ -60,9 +50,9 @@ jobs:
           tags: conradzeirpud/conradworld
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-name: conradzeirpud/conradworld
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
+      # - name: Generate artifact attestation
+      #   uses: actions/attest-build-provenance@v1
+      #   with:
+      #     subject-name: conradzeirpud/conradworld
+      #     subject-digest: ${{ steps.push.outputs.digest }}
+      #     push-to-registry: true
